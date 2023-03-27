@@ -56,7 +56,7 @@ public class Spot {
         this.spotType = spotType;
     }
 
-    public int getPricePerHouse() {
+    public int getPricePerHour() {
         return pricePerHour;
     }
 

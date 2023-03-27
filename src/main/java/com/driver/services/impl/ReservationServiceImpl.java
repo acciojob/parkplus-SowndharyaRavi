@@ -64,24 +64,24 @@ public class ReservationServiceImpl implements ReservationService {
 
             for(Spot spot:spotList){
                 if(spotType.equals(SpotType.OTHERS) && spot.getSpotType().equals(SpotType.OTHERS)){
-                    if(spot.getPricePerHouse()*timeInHours <min && !spot.getOccupied()){
-                        min=spot.getPricePerHouse()*timeInHours;
+                    if(spot.getPricePerHour()*timeInHours <min && !spot.getOccupied()){
+                        min=spot.getPricePerHour()*timeInHours;
                         isSpotPresent=true;
                         desiredSpot=spot;
                     }
                 }
                 else if(spotType.equals(SpotType.FOUR_WHEELER) && spot.getSpotType().equals(SpotType.OTHERS) ||
                         spot.getSpotType().equals(SpotType.FOUR_WHEELER)){
-                    if(spot.getPricePerHouse()*timeInHours <min && !spot.getOccupied()){
-                        min=spot.getPricePerHouse()*timeInHours;
+                    if(spot.getPricePerHour()*timeInHours <min && !spot.getOccupied()){
+                        min=spot.getPricePerHour()*timeInHours;
                         isSpotPresent=true;
                         desiredSpot=spot;
                     }
                 }
                 else if(spotType.equals(SpotType.TWO_WHEELER) && spot.getSpotType().equals(SpotType.OTHERS)
                 || spot.getSpotType().equals(SpotType.FOUR_WHEELER) || spot.getSpotType().equals(SpotType.TWO_WHEELER)){
-                    if(spot.getPricePerHouse()*timeInHours <min && !spot.getOccupied()){
-                        min=spot.getPricePerHouse()*timeInHours;
+                    if(spot.getPricePerHour()*timeInHours <min && !spot.getOccupied()){
+                        min=spot.getPricePerHour()*timeInHours;
                         isSpotPresent=true;
                         desiredSpot=spot;
                     }
