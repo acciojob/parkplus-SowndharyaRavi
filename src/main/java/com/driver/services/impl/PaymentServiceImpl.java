@@ -31,14 +31,14 @@ public class PaymentServiceImpl implements PaymentService {
 
         if(mode.equalsIgnoreCase("CASH") || mode.equalsIgnoreCase("CARD") || mode.equalsIgnoreCase("UPI")){
             Payment payment=new Payment();
-            if(mode.equals("CASH")){
-                payment.setPaymentMode(PaymentMode.CASH);
+            if(mode.equals("UPI")){
+                payment.setPaymentMode(PaymentMode.UPI);
             }
             else if(mode.equals("CARD")){
                 payment.setPaymentMode(PaymentMode.CARD);
             }
             else{
-                payment.setPaymentMode(PaymentMode.UPI);
+                payment.setPaymentMode(PaymentMode.CASH);
             }
 
             payment.setPaymentCompleted(true);

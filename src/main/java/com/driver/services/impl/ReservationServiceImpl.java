@@ -92,9 +92,9 @@ public class ReservationServiceImpl implements ReservationService {
                 throw new Exception("Cannot make reservation");
             }
 
-            if(desiredSpot!=null) {
-                desiredSpot.setOccupied(true);
-            }
+            assert desiredSpot!=null;
+            desiredSpot.setOccupied(true);
+
 
             Reservation reservation=new Reservation();
             reservation.setNumberOfHours(timeInHours);
